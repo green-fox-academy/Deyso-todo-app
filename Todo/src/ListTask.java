@@ -10,7 +10,7 @@ public class ListTask {
         List<String> content = new ArrayList<>();
 
         try {
-            Path path = Paths.get("todoList.txt");
+            Path path = Paths.get("C:\\Users\\bauer\\MakeTodo\\Deyso-todo-app\\Todo\\todoList.txt");
             List<String> lines = Files.readAllLines(path);
             content = lines;
 

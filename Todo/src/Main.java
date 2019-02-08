@@ -19,18 +19,13 @@ public class Main {
             System.out.println(" -c   Completes an task");
         }
         ListTask myTodoList = new ListTask();
-        int i = 0;
-        while (i==0) {
-            Scanner scanner = new Scanner(System.in);
-            String command = scanner.next();
+        if (args[0].equals("-l")) {
+            List<String> getItem = myTodoList.getList();
+            for (String oneItem : getItem) {
+                System.out.println(oneItem);
 
-
-            if (command.equals("-l")) {
-                List<String > etwas = myTodoList.getList();
-                for (String valami:etwas) {
-                    System.out.println(valami);
-                }
             }
+            args[0].equals("");
         }
     }
 }
