@@ -1,11 +1,13 @@
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
-
-
 
 public class Main {
     public static void main(String[] args) {
+
         if (args.length == 0) {
             System.out.println("Command Line Todo application");
             System.out.println("=============================");
@@ -16,20 +18,19 @@ public class Main {
             System.out.println(" -r   Removes an task");
             System.out.println(" -c   Completes an task");
         }
-        
-        Scanner scanner = new Scanner(System.in);
-        String command = scanner.next();
+        ListTask myTodoList = new ListTask();
+        int i = 0;
+        while (i==0) {
+            Scanner scanner = new Scanner(System.in);
+            String command = scanner.next();
 
-        if (command == "-l"){
 
+            if (command.equals("-l")) {
+                List<String > etwas = myTodoList.getList();
+                for (String valami:etwas) {
+                    System.out.println(valami);
+                }
+            }
         }
-
-
-      /*  try {
-            Path path = Paths.get("text.txt");
-        }catch (){
-
-        }*/
-
     }
 }
